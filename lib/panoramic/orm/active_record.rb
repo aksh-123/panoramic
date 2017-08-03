@@ -17,7 +17,7 @@ module Panoramic
 
       module ClassMethods
         def find_model_templates(conditions = {})
-          self.where(conditions)
+          self.current_theme.where(conditions)
         end
 
         def resolver(options={})
